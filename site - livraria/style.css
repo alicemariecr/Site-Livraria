@@ -1,0 +1,169 @@
+/* Reset básico para tirar margens padrão do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif; /* Fonte serifada combina com a marca */
+}
+
+/* Container Principal do Cabeçalho */
+.header-livraria {
+  background-color: #556b4f; /* Verde oliva extraído da sua imagem */
+  color: #f1ebd9;            /* Tom creme/bege das letras da sua logo */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  height: 90px;             /* Altura ideal para acomodar bem a logo */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Alinhamento geral das três áreas internas */
+.header-esquerda, 
+.header-centro, 
+.header-direita {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* --- LADO ESQUERDO --- */
+.botao-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.botao-menu .linha {
+  background-color: #f1ebd9;
+  width: 24px;
+  height: 2px;
+  transition: 0.3s;
+}
+
+.links-navegacao a {
+  color: #f1ebd9;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.links-navegacao a:hover {
+  text-decoration: underline;
+}
+
+/* --- CENTRO (LOGO) --- */
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo-imagem {
+  height: 70px;       /* Controla o tamanho vertical da sua imagem */
+  width: auto;         /* Mantém a proporção correta para não distorcer */
+  object-fit: contain;
+}
+
+/* --- LADO DIREITO (ÍCONES) --- */
+.botao-icone {
+  background: none;
+  border: none;
+  color: #f1ebd9;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.botao-icone:hover {
+  transform: scale(1.05);
+}
+
+/* Contador do Carrinho */
+.carrinho-container {
+  position: relative;
+}
+
+.contador-itens {
+  background-color: #d1a153; /* Tom dourado/bege escuro para destacar o zero */
+  color: #556b4f;            /* Texto interno com o verde do fundo */
+  font-size: 11px;
+  font-weight: bold;
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* Container que junta o input e o botão */
+.campo-pesquisa {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  width: 100%;
+  background-color: #f5f5f7; /* Cor de fundo suave */
+  border: 2px solid transparent;
+  border-radius: 50px; /* Bordas arredondadas estilo "pílula" */
+  padding: 6px 16px;
+  transition: all 0.3s ease; /* Animação suave ao interagir */
+}
+
+/* Estilo do campo de texto */
+.search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  color: #333;
+  outline: none; /* Remove a linha preta/azul padrão do navegador */
+  padding: 8px 0;
+}
+
+/* Estilo do texto de ajuda (placeholder) */
+.search-input::placeholder {
+  color: #999;
+}
+
+/* Estilo do botão com o ícone */
+.search-button {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  transition: color 0.2s ease;
+}
+
+/* --- EFEITOS DE INTERAÇÃO (O que deixa bonito) --- */
+
+/* Quando o usuário clica para digitar, a barra inteira muda de cor */
+.search-container:focus-within {
+  border-color: #0071e3; /* Azul estilo Apple/Google */
+  background-color: #fff; /* Fundo fica branco */
+  box-shadow: 0 0 8px rgba(0, 113, 227, 0.2); /* Sombra leve */
+}
+
+/* Mudança de cor do ícone quando passa o mouse no botão */
+.search-button:hover {
+  color: #0071e3;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Entrelinhas Livraria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>    
+
+<header class="header-livraria">
+  <div class="header-esquerda">
+    <button class="botao-menu" aria-label="Abrir Menu">
+      <span class="linha"></span>
+      <span class="linha"></span>
+      <span class="linha"></span>
+    </button>
+  </div>
+
+  <div class="header-centro">
+    <a href="/" class="logo-link">
+      <img src="entrelinhas.png" alt="Entrelinhas Livraria" class="logo-imagem">
+    </a>
+  </div>
+
+  <div class="header-direita">
+    <button class="botao-icone" aria-label="Favoritos">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+      </svg>
+    </button>
+
+    <button class="botao-icone carrinho-container" aria-label="Carrinho de Compras">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg>
+      <span class="contador-itens">0</span>
+    </button>
+  </div>
+</header>
+
+
+<div class="busca">
+    <form action="/pesquisa" method="get">
+        <label for="campo-busca">Buscar:</label>
+        <input type="search" id="campo-busca" name="q" placeholder="Buscar títulos ou autores">
+        <button type="submit">Pesquisar</button>
+    </form>
+</div>
+
+
+
+</body>
+</html>
